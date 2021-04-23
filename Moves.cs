@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Chess
 {
-    class Moves
+    class Moves // класс для проверки всех ходов
     {
         FigureMoving fm;
         Board board;

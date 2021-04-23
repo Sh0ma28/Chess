@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Chess
 {
-    struct Square
+    class Square // класс клетки доски
     {
-        public static Square none = new Square (-1, -1);
 
         public int x { get; private set; }
         public int y { get; private set; }
@@ -19,7 +18,7 @@ namespace Chess
             this.y = y;
         }
 
-        public Square (string e2) // перевод в координаты x,y
+        public Square (string e2) // перевод в координаты x, y
         {
             if (e2.Length == 2 &&
                 e2[0] >= 'a' && e2[0] <= 'h' &&
@@ -28,8 +27,9 @@ namespace Chess
                 x = e2[0] - 'a';
                 y = e2[1] - '1';
             }
-            else this = none;
+            else this.x = this.y = -1;
         }
+
         public bool OnBoard () 
         {
             return x >= 0 && x < 8 && y >= 0 && y < 8;

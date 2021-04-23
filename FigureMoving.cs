@@ -6,18 +6,11 @@ using System.Threading.Tasks;
 
 namespace Chess
 {
-    class FigureMoving
+    class FigureMoving // класс для хода
     {
         public Figure figure { get; private set; }
         public Square from { get; private set; }
         public Square to { get; private set; }
-
-        public FigureMoving (FigureOnSquare fs, Square to)
-        {
-            this.figure = fs.figure;
-            this.from = fs.square;
-            this.to = to;
-        }
 
         public FigureMoving (string move)
         {

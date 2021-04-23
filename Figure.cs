@@ -25,7 +25,7 @@ namespace Chess
         blackPawn = 'p'
     }
 
-    static class FigureMethods // класс, чтобы использовать методы для перечисления
+    static class FigureMethods
     {
         public static Color GetColor(this Figure figure) 
         {

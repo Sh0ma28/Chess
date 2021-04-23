@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Chess
 {
-    public class Chess
+    public class Chess // основной связующий класс
     {
         public string fen { get; private set; }
         Board board;
         Moves moves;
+
         public Chess (string fen)
         {
             this.fen = fen;
